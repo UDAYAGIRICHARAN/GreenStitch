@@ -38,9 +38,26 @@ mvn spring-boot:run
 
 The application provides the following endpoints for user management and authentication:
 
-- **POST /users**: Create a new user.
+
+
+
+- **POST /login**: Generate JWT token for authentication.
+- Request Body: JwtRequest object containing username and password.
+- Response: JwtResponse object containing JWT token.
+
+![image](https://github.com/UDAYAGIRICHARAN/GreenStitch/assets/67089878/3136e202-230c-49c9-b782-2299421c461a)
+
+- **POST /users/signup**: Register a new user.
 - Request Body: User object in JSON format.
-- Response: Created user object.
+- Response: Registered user object.
+
+
+![image](https://github.com/UDAYAGIRICHARAN/GreenStitch/assets/67089878/0f00f3e7-73c7-4839-83cf-0c50abc9e005)
+
+
+
+
+### Created other APIs for the admin features
 
 - **GET /users/{id}**: Retrieve a specific user by ID.
 - Path Variable: User ID.
@@ -58,9 +75,7 @@ The application provides the following endpoints for user management and authent
 - **GET /users/all**: Retrieve all users.
 - Response: List of user objects.
 
-- **POST /users/signup**: Register a new user.
-- Request Body: User object in JSON format.
-- Response: Registered user object.
+
 
 - **GET /users/forAdmin**: Accessible to users with the 'Admin' role only.
 - Response: Success message.
@@ -71,17 +86,6 @@ The application provides the following endpoints for user management and authent
 - **POST /createNewRole**: Create a new role.
 - Request Body: Role object in JSON format.
 - Response: Created role object.
-
-- **POST /login**: Generate JWT token for authentication.
-- Request Body: JwtRequest object containing username and password.
-- Response: JwtResponse object containing JWT token.
-
-![image](https://github.com/UDAYAGIRICHARAN/GreenStitch/assets/67089878/3136e202-230c-49c9-b782-2299421c461a)
-
-
-
-
-![image](https://github.com/UDAYAGIRICHARAN/GreenStitch/assets/67089878/0f00f3e7-73c7-4839-83cf-0c50abc9e005)
 
 
 
